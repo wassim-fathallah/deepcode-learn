@@ -70,9 +70,7 @@ This project contributes to:
 
 ---
 
-## 🙏 Acknowledgments
-Supervised by **Dr. Mohamed Ali Haj Taieb**, DES Research Unit.  
-Developed by **Mohamed Adam Alimi** (INSAT, Tunisia).  
+Developed by **Wassim Fathallah** (ISG, Tunisia).  
 
 📄 Licensed for academic and research purposes.  
 
