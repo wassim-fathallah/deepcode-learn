@@ -1,0 +1,288 @@
+[
+
+  {
+    "id": "cpp-1",
+    "title": "Check Even or Odd",
+    "short_description": "Return 'Even' if number is even, else 'Odd'.",
+    "description": "Write a function that returns 'Even' for even integers and 'Odd' for odd integers.\n\n```cpp\nstring evenOdd(int num) {\n    return (num % 2 == 0) ? \"Even\" : \"Odd\";\n}\n```",
+    "difficulty": "Easy",
+    "tests": [
+      {"input": "4", "output": "\"Even\""},
+      {"input": "7", "output": "\"Odd\""},
+      {"input": "0", "output": "\"Even\""},
+      {"input": "-1", "output": "\"Odd\""},
+      {"input": "100", "output": "\"Even\""},
+      {"input": "101", "output": "\"Odd\""}
+    ]
+  },
+  {
+    "id": "cpp-2",
+    "title": "Factorial of a Number",
+    "short_description": "Return factorial of a non-negative integer.",
+    "description": "Compute the factorial of a given number.\n\n```cpp\nint factorial(int n) {\n    if (n == 0) return 1;\n    return n * factorial(n - 1);\n}\n```",
+    "difficulty": "Easy",
+    "tests": [
+      {"input": "5", "output": "120"},
+      {"input": "0", "output": "1"},
+      {"input": "1", "output": "1"},
+      {"input": "3", "output": "6"},
+      {"input": "7", "output": "5040"}
+    ]
+  },
+  {
+    "id": "cpp-3",
+    "title": "Reverse a String",
+    "short_description": "Reverse the input string.",
+    "description": "Return the reversed version of the given string.\n\n```cpp\nstring reverseString(string s) {\n    reverse(s.begin(), s.end());\n    return s;\n}\n```",
+    "difficulty": "Easy",
+    "tests": [
+      {"input": "\"hello\"", "output": "\"olleh\""},
+      {"input": "\"\"", "output": "\"\""},
+      {"input": "\"a\"", "output": "\"a\""},
+      {"input": "\"12345\"", "output": "\"54321\""},
+      {"input": "\"racecar\"", "output": "\"racecar\""}
+    ]
+  },
+  {
+    "id": "cpp-4",
+    "title": "Check Palindrome",
+    "short_description": "Check if a string is a palindrome.",
+    "description": "Return `true` if the string reads the same backward as forward.\n\n```cpp\nbool isPalindrome(string s) {\n    string rev = s;\n    reverse(rev.begin(), rev.end());\n    return s == rev;\n}\n```",
+    "difficulty": "Easy",
+    "tests": [
+      {"input": "\"racecar\"", "output": "true"},
+      {"input": "\"hello\"", "output": "false"},
+      {"input": "\"\"", "output": "true"},
+      {"input": "\"a\"", "output": "true"},
+      {"input": "\"12321\"", "output": "true"}
+    ]
+  },
+  {
+    "id": "cpp-5",
+    "title": "Sum of Array Elements",
+    "short_description": "Sum all elements in an integer array.",
+    "description": "Return the sum of all elements in the array.\n\n```cpp\nint sumArray(vector<int> arr) {\n    return accumulate(arr.begin(), arr.end(), 0);\n}\n```",
+    "difficulty": "Easy",
+    "tests": [
+      {"input": "{1, 2, 3}", "output": "6"},
+      {"input": "{}", "output": "0"},
+      {"input": "{-1, -2, -3}", "output": "-6"},
+      {"input": "{10, 20, 30}", "output": "60"},
+      {"input": "{0, 0, 0}", "output": "0"}
+    ]
+  },
+  {
+    "id": "cpp-6",
+    "title": "Find Maximum in Array",
+    "short_description": "Return the largest element in an array.",
+    "description": "Given an integer array, return the maximum value.\n\n```cpp\nint findMax(vector<int> arr) {\n    return *max_element(arr.begin(), arr.end());\n}\n```",
+    "difficulty": "Easy",
+    "tests": [
+      {"input": "{1, 5, 3}", "output": "5"},
+      {"input": "{-1, -5, -3}", "output": "-1"},
+      {"input": "{0}", "output": "0"},
+      {"input": "{100, 200, 50}", "output": "200"},
+      {"input": "{7, 7, 7}", "output": "7"}
+    ]
+  },
+  {
+    "id": "cpp-7",
+    "title": "Check Prime Number",
+    "short_description": "Check if a number is prime.",
+    "description": "Return `true` if the number is prime, else `false`.\n\n```cpp\nbool isPrime(int n) {\n    if (n <= 1) return false;\n    for (int i = 2; i * i <= n; i++)\n        if (n % i == 0) return false;\n    return true;\n}\n```",
+    "difficulty": "Easy",
+    "tests": [
+      {"input": "7", "output": "true"},
+      {"input": "4", "output": "false"},
+      {"input": "1", "output": "false"},
+      {"input": "13", "output": "true"},
+      {"input": "100", "output": "false"}
+    ]
+  },
+  {
+    "id": "cpp-8",
+    "title": "Count Vowels in String",
+    "short_description": "Count the number of vowels (a, e, i, o, u).",
+    "description": "Return the count of vowels in a string (case-insensitive).\n\n```cpp\nint countVowels(string s) {\n    int count = 0;\n    for (char c : s)\n        if (tolower(c) == 'a' || tolower(c) == 'e' || tolower(c) == 'i' || tolower(c) == 'o' || tolower(c) == 'u')\n            count++;\n    return count;\n}\n```",
+    "difficulty": "Easy",
+    "tests": [
+      {"input": "\"hello\"", "output": "2"},
+      {"input": "\"AEIOU\"", "output": "5"},
+      {"input": "\"xyz\"", "output": "0"},
+      {"input": "\"\"", "output": "0"},
+      {"input": "\"Programming\"", "output": "3"}
+    ]
+  },
+  {
+    "id": "cpp-9",
+    "title": "Reverse an Integer",
+    "short_description": "Reverse digits of an integer.",
+    "description": "Return the reversed integer (handle negative numbers).\n\n```cpp\nint reverseInt(int x) {\n    long rev = 0;\n    while (x != 0) {\n        rev = rev * 10 + x % 10;\n        x /= 10;\n    }\n    return (rev < INT_MIN || rev > INT_MAX) ? 0 : rev;\n}\n```",
+    "difficulty": "Easy",
+    "tests": [
+      {"input": "123", "output": "321"},
+      {"input": "-123", "output": "-321"},
+      {"input": "120", "output": "21"},
+      {"input": "0", "output": "0"},
+      {"input": "1534236469", "output": "0"}  
+    ]
+  },
+  {
+    "id": "cpp-10",
+    "title": "Find Duplicates in Array",
+    "short_description": "Return duplicates from an array.",
+    "description": "Return a list of elements that appear more than once.\n\n```cpp\nvector<int> findDuplicates(vector<int> nums) {\n    unordered_map<int, int> freq;\n    vector<int> res;\n    for (int num : nums)\n        if (++freq[num] == 2) res.push_back(num);\n    return res;\n}\n```",
+    "difficulty": "Medium",
+    "tests": [
+      {"input": "{1, 2, 2, 3, 3, 3}", "output": "{2, 3}"},
+      {"input": "{1, 1, 1}", "output": "{1}"},
+      {"input": "{}", "output": "{}"},
+      {"input": "{5, 4, 3, 2}", "output": "{}"},
+      {"input": "{10, 20, 10, 30, 20}", "output": "{10, 20}"}
+    ]
+  },
+
+ 
+  {
+    "id": "cpp-11",
+    "title": "Check Anagram Strings",
+    "short_description": "Determine if two strings are anagrams.",
+    "description": "Return `true` if the two strings are anagrams.\n\n```cpp\nbool isAnagram(string s, string t) {\n    sort(s.begin(), s.end());\n    sort(t.begin(), t.end());\n    return s == t;\n}\n```",
+    "difficulty": "Medium",
+    "tests": [
+      {"input": "\"listen\", \"silent\"", "output": "true"},
+      {"input": "\"hello\", \"world\"", "output": "false"},
+      {"input": "\"\", \"\"", "output": "true"},
+      {"input": "\"abc\", \"cba\"", "output": "true"},
+      {"input": "\"rat\", \"car\"", "output": "false"}
+    ]
+  },
+  {
+    "id": "cpp-12",
+    "title": "Fibonacci Sequence",
+    "short_description": "Generate Fibonacci sequence up to n.",
+    "description": "Return a list of Fibonacci numbers up to n.\n\n```cpp\nvector<int> fibonacci(int n) {\n    vector<int> fib = {0, 1};\n    while (fib.back() <= n) {\n        fib.push_back(fib.back() + fib[fib.size() - 2]);\n    }\n    fib.pop_back();\n    return fib;\n}\n```",
+    "difficulty": "Medium",
+    "tests": [
+      {"input": "5", "output": "{0, 1, 1, 2, 3, 5}"},
+      {"input": "0", "output": "{0}"},
+      {"input": "1", "output": "{0, 1, 1}"},
+      {"input": "10", "output": "{0, 1, 1, 2, 3, 5, 8}"},
+      {"input": "20", "output": "{0, 1, 1, 2, 3, 5, 8, 13}"}
+    ]
+  },
+  {
+    "id": "cpp-13",
+    "title": "Remove Duplicates from Sorted Array",
+    "short_description": "Remove duplicates in-place.",
+    "description": "Modify the array in-place to remove duplicates and return the new length.\n\n```cpp\nint removeDuplicates(vector<int>& nums) {\n    nums.erase(unique(nums.begin(), nums.end()), nums.end());\n    return nums.size();\n}\n```",
+    "difficulty": "Medium",
+    "tests": [
+      {"input": "{1, 1, 2}", "output": "2"},
+      {"input": "{0, 0, 1, 1, 1, 2, 2}", "output": "3"},
+      {"input": "{}", "output": "0"},
+      {"input": "{1, 2, 3}", "output": "3"},
+      {"input": "{1, 1, 1}", "output": "1"}
+    ]
+  },
+  {
+    "id": "cpp-14",
+    "title": "Longest Common Prefix",
+    "short_description": "Find the longest common prefix among strings.",
+    "description": "Return the longest prefix shared by all strings in an array.\n\n```cpp\nstring longestCommonPrefix(vector<string> strs) {\n    if (strs.empty()) return \"\";\n    string prefix = strs[0];\n    for (string s : strs)\n        while (s.find(prefix) != 0)\n            prefix = prefix.substr(0, prefix.length() - 1);\n    return prefix;\n}\n```",
+    "difficulty": "Medium",
+    "tests": [
+      {"input": "{\"flower\", \"flow\", \"flight\"}", "output": "\"fl\""},
+      {"input": "{\"dog\", \"racecar\", \"car\"}", "output": "\"\""},
+      {"input": "{\"\", \"\", \"\"}", "output": "\"\""},
+      {"input": "{\"apple\", \"app\", \"apricot\"}", "output": "\"ap\""},
+      {"input": "{\"same\", \"same\", \"same\"}", "output": "\"same\""}
+    ]
+  },
+  {
+    "id": "cpp-15",
+    "title": "Merge Two Sorted Arrays",
+    "short_description": "Merge two sorted arrays into one sorted array.",
+    "description": "Given two sorted arrays, merge them into a single sorted array.\n\n```cpp\nvector<int> mergeSortedArrays(vector<int> a, vector<int> b) {\n    vector<int> res;\n    merge(a.begin(), a.end(), b.begin(), b.end(), back_inserter(res));\n    return res;\n}\n```",
+    "difficulty": "Medium",
+    "tests": [
+      {"input": "{1, 3, 5}, {2, 4, 6}", "output": "{1, 2, 3, 4, 5, 6}"},
+      {"input": "{}, {1, 2, 3}", "output": "{1, 2, 3}"},
+      {"input": "{10, 20}, {5, 15}", "output": "{5, 10, 15, 20}"},
+      {"input": "{}, {}", "output": "{}"},
+      {"input": "{0}, {0}", "output": "{0, 0}"}
+    ]
+  },
+
+  
+  {
+    "id": "cpp-16",
+    "title": "Longest Substring Without Repeating Characters",
+    "short_description": "Find the length of the longest unique substring.",
+    "description": "Return the length of the longest substring without repeating characters.\n\n```cpp\nint lengthOfLongestSubstring(string s) {\n    unordered_set<char> seen;\n    int maxLen = 0, left = 0;\n    for (int right = 0; right < s.size(); right++) {\n        while (seen.count(s[right])) seen.erase(s[left++]);\n        seen.insert(s[right]);\n        maxLen = max(maxLen, right - left + 1);\n    }\n    return maxLen;\n}\n```",
+    "difficulty": "Hard",
+    "tests": [
+      {"input": "\"abcabcbb\"", "output": "3"},
+      {"input": "\"bbbbb\"", "output": "1"},
+      {"input": "\"pwwkew\"", "output": "3"},
+      {"input": "\"\"", "output": "0"},
+      {"input": "\"abcdef\"", "output": "6"}
+    ]
+  },
+  {
+    "id": "cpp-17",
+    "title": "Median of Two Sorted Arrays",
+    "short_description": "Find the median of two sorted arrays.",
+    "description": "Return the median of the combined sorted arrays.\n\n```cpp\ndouble findMedianSortedArrays(vector<int> nums1, vector<int> nums2) {\n    vector<int> merged;\n    merge(nums1.begin(), nums1.end(), nums2.begin(), nums2.end(), back_inserter(merged));\n    int n = merged.size();\n    return (n % 2 == 0) ? (merged[n/2 - 1] + merged[n/2]) / 2.0 : merged[n/2];\n}\n```",
+    "difficulty": "Hard",
+    "tests": [
+      {"input": "{1, 3}, {2}", "output": "2.0"},
+      {"input": "{1, 2}, {3, 4}", "output": "2.5"},
+      {"input": "{}, {1}", "output": "1.0"},
+      {"input": "{0, 0}, {0, 0}", "output": "0.0"},
+      {"input": "{100}, {101}", "output": "100.5"}
+    ]
+  },
+  {
+    "id": "cpp-18",
+    "title": "Regular Expression Matching",
+    "short_description": "Implement regex matching with '.' and '*'.",
+    "description": "Return `true` if the string matches the pattern (supporting '.' and '*').\n\n```cpp\nbool isMatch(string s, string p) {\n    if (p.empty()) return s.empty();\n    bool firstMatch = (!s.empty() && (s[0] == p[0] || p[0] == '.'));\n    if (p.size() >= 2 && p[1] == '*')\n        return isMatch(s, p.substr(2)) || (firstMatch && isMatch(s.substr(1), p));\n    else\n        return firstMatch && isMatch(s.substr(1), p.substr(1));\n}\n```",
+    "difficulty": "Hard",
+    "tests": [
+      {"input": "\"aa\", \"a\"", "output": "false"},
+      {"input": "\"aa\", \"a*\"", "output": "true"},
+      {"input": "\"ab\", \".*\"", "output": "true"},
+      {"input": "\"aab\", \"c*a*b\"", "output": "true"},
+      {"input": "\"mississippi\", \"mis*is*p*.\"", "output": "false"}
+    ]
+  },
+  {
+    "id": "cpp-19",
+    "title": "Word Ladder (BFS)",
+    "short_description": "Find the shortest transformation sequence length.",
+    "description": "Given two words and a dictionary, find the length of the shortest transformation sequence.\n\n```cpp\nint ladderLength(string beginWord, string endWord, vector<string> wordList) {\n    unordered_set<string> dict(wordList.begin(), wordList.end());\n    if (!dict.count(endWord)) return 0;\n    queue<string> q;\n    q.push(beginWord);\n    int ladder = 1;\n    while (!q.empty()) {\n        int size = q.size();\n        for (int i = 0; i < size; i++) {\n            string word = q.front(); q.pop();\n            if (word == endWord) return ladder;\n            for (int j = 0; j < word.size(); j++) {\n                char original = word[j];\n                for (char c = 'a'; c <= 'z'; c++) {\n                    word[j] = c;\n                    if (dict.count(word)) {\n                        q.push(word);\n                        dict.erase(word);\n                    }\n                }\n                word[j] = original;\n            }\n        }\n        ladder++;\n    }\n    return 0;\n}\n```",
+    "difficulty": "Hard",
+    "tests": [
+      {"input": "\"hit\", \"cog\", {\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"}", "output": "5"},
+      {"input": "\"hit\", \"cog\", {\"hot\",\"dot\",\"dog\",\"lot\",\"log\"}", "output": "0"},
+      {"input": "\"a\", \"c\", {\"a\",\"b\",\"c\"}", "output": "2"},
+      {"input": "\"hot\", \"dog\", {\"hot\",\"dog\"}", "output": "2"},
+      {"input": "\"red\", \"tax\", {\"ted\",\"tex\",\"red\",\"tax\",\"tad\",\"den\",\"rex\",\"pee\"}", "output": "4"}
+    ]
+  },
+  {
+    "id": "cpp-20",
+    "title": "Trapping Rain Water",
+    "short_description": "Compute how much water can be trapped between bars.",
+    "description": "Given an elevation map, compute trapped water after raining.\n\n```cpp\nint trap(vector<int> height) {\n    int left = 0, right = height.size() - 1;\n    int leftMax = 0, rightMax = 0, res = 0;\n    while (left < right) {\n        if (height[left] < height[right]) {\n            leftMax = max(leftMax, height[left]);\n            res += leftMax - height[left];\n            left++;\n        } else {\n            rightMax = max(rightMax, height[right]);\n            res += rightMax - height[right];\n            right--;\n        }\n    }\n    return res;\n}\n```",
+    "difficulty": "Hard",
+    "tests": [
+      {"input": "{0,1,0,2,1,0,1,3,2,1,2,1}", "output": "6"},
+      {"input": "{4,2,0,3,2,5}", "output": "9"},
+      {"input": "{}", "output": "0"},
+      {"input": "{5}", "output": "0"},
+      {"input": "{1, 0, 1}", "output": "1"}
+    ]
+  }
+]
